@@ -1,9 +1,27 @@
 # Android 异常日志捕获与存储
 
+Tag=[![](https://jitpack.io/v/hslooooooool/utils-exception.svg)](https://jitpack.io/#hslooooooool/utils-exception)
+
 依赖于 [Timber](https://github.com/JakeWharton/timber) 日志框架，版本： `com.jakewharton.timber:timber:4.7.1` 。
 
 通过实现 `Thread.UncaughtExceptionHandler` 接口，使用 `Timber` 对未处理的异常进行打印，并通过设置 `Timber.Tree` 实现打印后的日志文件输出。
 输出路径默认为： `/data/user/0/package-name/files/exception` ，输出文件以当天时间命名，如： `log-2020-05-19.txt` 。
+
+## 依赖
+
+```groovy
+	allprojects {
+		repositories {
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+```groovy
+	dependencies {
+	        implementation 'com.github.hslooooooool:utils-exception:Tag'
+	}
+```
 
 ## 使用说明
 
