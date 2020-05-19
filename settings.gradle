@@ -1,0 +1,3 @@
+rootProject.name='utils-exception'
+include ':app'
+include ':lib'
