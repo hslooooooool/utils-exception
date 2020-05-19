@@ -32,7 +32,6 @@ dependencies {
     implementation(
             fileTree(dir: 'libs', include: ['*.jar']),
             'androidx.core:core-ktx:1.2.0',
-            'androidx.core:core-ktx:1.2.0',
             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     )
     api(
