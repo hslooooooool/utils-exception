@@ -33,6 +33,7 @@ dependencies {
             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
             'androidx.appcompat:appcompat:1.1.0',
             'androidx.core:core-ktx:1.2.0',
+            'com.jakewharton.timber:timber:4.7.1',
             'androidx.constraintlayout:constraintlayout:1.1.3',
     )
 }
