@@ -28,7 +28,7 @@ android {
 dependencies {
     implementation(
             fileTree(dir: 'libs', include: ['*.jar']),
-            project(':lib'),
+            project(':utils_exception'),
             //'com.github.hslooooooool:utils-exception:0.1',
             "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72",
             'androidx.appcompat:appcompat:1.1.0',

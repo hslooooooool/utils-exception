@@ -3,7 +3,6 @@ package vip.qsos.utils_exception
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_exception.*
-import vip.qsos.utils_exception.lib.GlobalExceptionHelper
 import java.io.IOException
 
 class ExceptionActivity : AppCompatActivity() {

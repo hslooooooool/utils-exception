@@ -1,4 +1,4 @@
-package vip.qsos.utils_exception.lib
+package vip.qsos.utils_exception
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -49,9 +49,9 @@ object GlobalExceptionHelper : Thread.UncaughtExceptionHandler {
         @LEVEL outputLevel: Int,
         tree: Timber.Tree = CatchTree()
     ) {
-        this.appContext = context.applicationContext
-        this.printLevel = printLevel
-        this.outputLevel = outputLevel
+        appContext = context.applicationContext
+        GlobalExceptionHelper.printLevel = printLevel
+        GlobalExceptionHelper.outputLevel = outputLevel
         Timber.uprootAll()
         Timber.plant(tree)
 
@@ -80,7 +80,10 @@ object GlobalExceptionHelper : Thread.UncaughtExceptionHandler {
             }
             if (priority >= outputLevel) {
                 if (appContext != null && !TextUtils.isEmpty(tag) && !TextUtils.isEmpty(message)) {
-                    saveCatchFile(tag!!, message)
+                    saveCatchFile(
+                        tag!!,
+                        message
+                    )
                 }
             }
         }
@@ -102,7 +105,8 @@ object GlobalExceptionHelper : Thread.UncaughtExceptionHandler {
     @SuppressLint("LogNotTimber")
     private fun writeFile(sb: String) {
         try {
-            val crash = getCatchFile()
+            val crash =
+                getCatchFile()
             val fos = FileOutputStream(crash, true)
             val osw = OutputStreamWriter(fos, "UTF-8")
             osw.write(sb)
@@ -126,7 +130,8 @@ object GlobalExceptionHelper : Thread.UncaughtExceptionHandler {
         if (!f3.exists()) {
             f3.createNewFile()
             try {
-                val info = phoneInfo()
+                val info =
+                    phoneInfo()
                 val fos = FileOutputStream(f3, true)
                 val osw = OutputStreamWriter(fos, "UTF-8")
                 osw.write(info)
