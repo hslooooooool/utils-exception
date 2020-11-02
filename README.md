@@ -20,6 +20,9 @@ Tag=[![](https://jitpack.io/v/hslooooooool/utils-exception.svg)](https://jitpack
 ```groovy
 	dependencies {
 	        implementation 'com.github.hslooooooool:utils-exception:Tag'
+		
+		// 必须引用 timber 日志依赖
+		api('com.jakewharton.timber:timber:4.7.1')
 	}
 ```
 
